@@ -22,7 +22,7 @@ public class UrlShortenerTest {
     }
 
     @Test
-    public void outputOfCalculateValueSuccess(){
+    public void calculateUrlValueSuccess(){
         String url = "hello";
         int expected = 22;
         int result = shortener.calculateUrlValue(url);
@@ -31,7 +31,7 @@ public class UrlShortenerTest {
     }
 
     @Test
-    public void outputOfCalculateValueFails(){
+    public void calculateUrlValueFails(){
         String url = "hello";
         int expected = 23;
         int result = shortener.calculateUrlValue(url);
