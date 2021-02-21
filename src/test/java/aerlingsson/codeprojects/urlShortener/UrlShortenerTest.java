@@ -53,8 +53,6 @@ public class UrlShortenerTest {
         int urlValue = shortener.calculateUrlValue(url);
         String result = shortener.getUniqueKey(urlValue);
 
-        System.out.println(expected + " " + result);
-
         assertEquals(expected, result);
     }
 
@@ -71,8 +69,6 @@ public class UrlShortenerTest {
 
         int urlValue = shortener.calculateUrlValue(url);
         String result = shortener.getUniqueKey(urlValue);
-
-        System.out.println(expected + " " + result);
 
         assertFalse(expected.equals(result));
     }
