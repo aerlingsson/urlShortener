@@ -1,14 +1,14 @@
 ## URL Shortener
 A simple URL shortener that takes a url (or any other string that does not contain "=>"), and creates a unique, short token for that string.
-Key-value pairs are stored in store.txt, using "=>" as a separator.
+Key-value pairs are stored in store.txt, using "=>" as a separator.\
 Project is built with Maven.
 
 ### Code structure
-**src/main** contains the *main* file App.java, and the UrlShortener.java class file.
+**src/main** contains the *main* file App.java, and the UrlShortener.java class file.\
 **src/test** contains the test files. Currently, only `UrlShortener` is tested (and only partially).
 
 #### App.java
-Facilitates very minimal CLI interaction with an `UrlShortener` object. To use the CLI functionality, supply arguments for whether you want to *shorten* a URL, or get the URL for a specific token, followed by the url or token:
+Facilitates very minimal CLI interaction with an `UrlShortener` object. To use the CLI functionality, supply arguments for whether you want to *shorten* a URL, or get the URL for a specific token, followed by the url or token:\
 `shorten <url>` or `get <token>`.
 
 #### UrlShortener.java
