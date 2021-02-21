@@ -45,7 +45,7 @@ public class UrlShortener {
 
     // Creates a unique token based on initially generated key
     public String getUniqueKey(int key){
-        while (getFromStoreMap(Integer.toString(key)) != null){
+        while (get(Integer.toString(key)) != null){
             key += 1;
         }
 
@@ -53,7 +53,7 @@ public class UrlShortener {
     }
 
     // Get value of key from storeMap
-    public String getFromStoreMap(String key){
+    public String get(String key){
         return this.storeMap.get(key);
     }
 
