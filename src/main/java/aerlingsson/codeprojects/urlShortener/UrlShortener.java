@@ -14,7 +14,6 @@ import java.util.Map;
 
 
 public class UrlShortener {
-    
     private String path = Paths.get(Paths.get("").toAbsolutePath().toString(), "store.txt").toString();
     private File file = new File(path);
     private HashMap<String, String> storeMap = new HashMap<>();
@@ -22,7 +21,7 @@ public class UrlShortener {
     // Constructor
     public UrlShortener(){}
 
-    // Shortens a URL and stores it
+    // Shortens a URL and stores it in storeMap
     public String shorten(String url){
         int urlValue = calculateUrlValue(url);
         String shortUrl = getUniqueKey(urlValue);
@@ -32,7 +31,7 @@ public class UrlShortener {
         return shortUrl;
     }
 
-    // Calculates a key value based on the value of each character in URL string
+    // Calculates a token value based on the value of each character in URL string
     public int calculateUrlValue(String url){
         int urlValue = 0;
 
@@ -43,7 +42,7 @@ public class UrlShortener {
         return urlValue;
     }
 
-    // Creates a unique token based on initially generated key
+    // Creates a unique token based on initially generated token
     public String getUniqueKey(int key){
         while (get(Integer.toString(key)) != null){
             key += 1;
@@ -52,24 +51,28 @@ public class UrlShortener {
         return Integer.toString(key);
     }
 
-    // Get value of key from storeMap
-    public String get(String key){
-        return this.storeMap.get(key);
+    // Get url of token from storeMap
+    private String get(String token){
+        return this.storeMap.get(token);
     }
 
+    // Resolves a token and returns its url if token is valid, or an error message (not exception) if not
+    public String resolve(String token){
+        if (this.storeMap.get(token) == null){
+            return "Invalid token";
+        }
+
+        return this.storeMap.get(token);
+    }
+
+    // Stores an entry in storeMap
     public void putInStoreMap(String key, String value){
         this.storeMap.put(key, value);
     }
 
-    public void removeFromStoreMap(String key){
-        this.storeMap.remove(key);
-    }
 
-    public HashMap<String, String> getStoreMap(){
-        return this.storeMap;
-    }
 
-    // Writes storeMap to store.txt, with one entry on each line, as such: "key=value"
+    // Writes storeMap to store.txt, with one entry on each line, as such: "token=>url"
     public void writeToFile(){
         try {
             FileWriter writer = new FileWriter(file);

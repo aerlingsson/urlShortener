@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 public class App {
     public static void main(String[] args) throws Exception {
         if (args.length == 0){  // No arguments supplied
-            System.out.println("Please supply command line arguments:\nshorten <url> to convert a link to a short token\nget <token> to get the link associated with the token");
+            System.out.println("Please supply command line arguments:\nshorten <url> to convert a link to a short token\nresolve <token> to get the link associated with the token");
             return;
         }
 

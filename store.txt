@@ -2,5 +2,10 @@
 23=>hello
 45=>1234link.dk
 24=>hello
+46=>1234link.dk
+134=>abcdefghijklmnopqrstuvwxyzæøå
+47=>1234link.dk
+135=>abcdefghijklmnopqrstuvwxyzæøå
+136=>abcdefghijklmnopqrstuvwxyzæøå
 236=>https://www.google.com/search?q=volkswagen+bus
 1804=>https://www.google.com/search?q=volkswagen+bus&tbm=isch&ved=2ahUKEwjpiL-K0_HuAhWDyqQKHbqPA-YQ2-cCegQIABAA&oq=volkswagen+bus&gs_lcp=CgNpbWcQARgAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECCMQJzoECAAQQ1C6gwFY09YBYMHYAWgDcAB4AIABZYgBggeSAQM4LjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=120tYKnBJ4OVkwW6n46wDg&bih=937&biw=949&client=firefox-b-d#imgrc=ps40Tp5NZ3JqvM
